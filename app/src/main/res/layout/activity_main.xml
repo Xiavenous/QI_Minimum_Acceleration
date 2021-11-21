@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/velocityBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:indeterminate="false"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <SeekBar
+        android:id="@+id/radiusBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="@+id/velocityBar"
+        app:layout_constraintStart_toStartOf="@+id/velocityBar"
+        app:layout_constraintTop_toBottomOf="@+id/velocityBar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/canvasColor" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Velocity:\nRadius:"
+        app:layout_constraintStart_toStartOf="@+id/velocityBar"
+        app:layout_constraintTop_toBottomOf="@+id/radiusBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
